@@ -1,10 +1,10 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Detail, CreateDog, Home, Landing } from './views/index';
-import axios from 'axios';
+//import axios from 'axios';
 
 //axios.default.baseUrl = 'http://localhost:3001';//para usar solo desde mi pc
-axios.default.baseUrl = 'dogsbackend-production-3cd7.up.railway.app';
+//axios.default.baseUrl = 'dogsbackend-production-3cd7.up.railway.app';
 /* 
 import SearchBar from './components/SearchBar';
 <Route exact path="/detail" render={() => <Detail />} />

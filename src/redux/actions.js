@@ -13,9 +13,11 @@ import {
   //SET_CURRENT_PAGE,
 } from './indexTypes';
 
+const URL_BASE = 'dogsbackend-production-3cd7.up.railway.app';
+
 export const getDogs = () => {
   return async function (dispatch) {
-    const apiData = await axios.get(`/dogs`);
+    const apiData = await axios.get(`${URL_BASE}/dogs`);
     const dogs = apiData.data;
     console.log(dogs);
     dispatch({ type: GET_DOGS, payload: dogs });
@@ -37,7 +39,7 @@ export const filterByWeight = (payload) => {
 
 export const dogsDetail = (id) => {
   return async (dispatch) => {
-    const apiData = await axios.get(`/dogs/${id}`);
+    const apiData = await axios.get(`${URL_BASE}/dogs/${id}`);
     return dispatch({
       type: DOGS_DETAIL,
       payload: apiData.data,
@@ -48,7 +50,7 @@ export const dogsDetail = (id) => {
 export const searchByName = (name) => {
   return async (dispatch) => {
     try {
-      const apiData = await axios.get(`/dogs?name=${name}`);
+      const apiData = await axios.get(`${URL_BASE}/dogs?name=${name}`);
       return dispatch({
         type: SEARCH_NAME,
         payload: apiData.data,
@@ -87,7 +89,7 @@ export const postDog = ({
       temperamento,
     });
 
-    await axios.post('/dogs', {
+    await axios.post(`${URL_BASE}/dogs`, {
       imagen,
       name,
       altura: heightMin + ' - ' + heightMax,
@@ -106,7 +108,7 @@ export const postDog = ({
 
 export const getTemperament = () => {
   return async function (dispach) {
-    let temp = await axios.get('/temperaments');
+    let temp = await axios.get(`${URL_BASE}/temperaments`);
     return dispach({
       type: GET_TEMPERAMENTS,
       payload: temp.data,
