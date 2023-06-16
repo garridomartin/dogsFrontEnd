@@ -1,0 +1,70 @@
+.Card {
+  border: 0px solid black;
+  flex-basis: calc(15% + 7%);
+  height: auto;
+  width: 180px;
+  border-radius: 10px;
+  padding: 0.5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Card:hover {
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  background-color: #a0d995;
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.Card img {
+  width: 100%;
+  height: auto;
+  max-height: calc(100% - 34px);
+  object-fit: contain;
+  border-radius: 20px;
+  margin-bottom: 0.5px; /* Ajusta el valor del margen inferior según tus preferencias */
+}
+
+.Card p:not(.Title):last-child {
+  margin-top: 0px; /* Ajusta el valor del margen superior según tus preferencias */
+  margin-bottom: 0; /* Establece el margen inferior en 0 para eliminar cualquier espacio adicional */
+}
+
+.Card .Title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 10px;
+  align-items: center;
+}
+
+.Card p:not(.Title) {
+  margin: 2px 0;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 10px;
+}
+
+.temper {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilos responsive */
+@media screen and (max-width: 768px) {
+  .Card {
+    flex-basis: calc(30% + 7%);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .Card {
+    flex-basis: calc(50% + 7%);
+  }
+}
