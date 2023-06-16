@@ -17,7 +17,9 @@ const URL_BASE = 'dogsbackend-production-3cd7.up.railway.app';
 
 export const getDogs = () => {
   return async function (dispatch) {
-    const apiData = await axios.get(`${URL_BASE}/dogs`);
+    const apiData = await axios.get(
+      `dogsbackend-production-3cd7.up.railway.app/dogs`
+    );
     const dogs = apiData.data;
     console.log(dogs);
     dispatch({ type: GET_DOGS, payload: dogs });
