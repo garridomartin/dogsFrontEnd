@@ -13,7 +13,7 @@ const Landing = () => {
           it's fun!
         </p>
         <Link to='/home'>
-          <button className={style.button}>INGRESAR</button>
+          <button className={style.button}>ENTER</button>
         </Link>
       </div>
     </div>
