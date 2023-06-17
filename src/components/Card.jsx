@@ -17,7 +17,7 @@ const Card = ({ name, peso, temperamento, imagen, id }) => {
     <div className={style.Card}>
       <p className={style.Title}>{name}</p>
       <p>
-        <strong>Peso:</strong> {peso}
+        <strong>Peso:</strong> {peso} kg.
       </p>
       <p>
         <strong>Temperamento:</strong>
