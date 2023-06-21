@@ -10,6 +10,7 @@ import SearchBar from './components/SearchBar';
 <Route exact path="/detail" render={() => <Detail />} />
 <Route exact path="/create" render={() => <Forms />} />
 {location.pathname !== '/' && <SearchBar />}
+<Route exact path='/' element={<LogIn />} />
  
  */
 
@@ -17,8 +18,7 @@ const App = () => {
   return (
     <div className='App'>
       <Routes>
-        <Route exact path='/' element={<LogIn />} />
-        <Route path='/welcome' element={<Landing />} />
+        <Route path='/' element={<Landing />} />
         <Route path='/home' element={<Home />} />
         <Route path='/dogs/:id' element={<Detail />} />
         <Route path='/create' element={<CreateDog />} />
