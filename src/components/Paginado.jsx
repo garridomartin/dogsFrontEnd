@@ -14,7 +14,7 @@ export default function Paginado({
   for (let i = 1; i <= Math.ceil(allDogs / dogsPerPage); i++) {
     pageNumber.push(i);
   }
-
+  console.log(pageNumber);
   return (
     <nav>
       <div className={style.paginationCenter}>

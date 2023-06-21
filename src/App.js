@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { Detail, CreateDog, Home, Landing } from './views/index';
+import { Detail, CreateDog, Home, Landing, LogIn } from './views/index';
 //import axios from 'axios';
 
 //axios.default.baseUrl = 'http://localhost:3001';//para usar solo desde mi pc
@@ -17,7 +17,8 @@ const App = () => {
   return (
     <div className='App'>
       <Routes>
-        <Route exact path='/' element={<Landing />} />
+        <Route exact path='/' element={<LogIn />} />
+        <Route path='/welcome' element={<Landing />} />
         <Route path='/home' element={<Home />} />
         <Route path='/dogs/:id' element={<Detail />} />
         <Route path='/create' element={<CreateDog />} />

@@ -9,7 +9,7 @@ import {
   GET_TEMPERAMENTS,
   FILTER_CREATED,
   FILTER_BY_TEMPERAMENT,
-  SET_CURRENT_PAGE,
+  // SET_CURRENT_PAGE,
 } from './indexTypes';
 
 const initialState = {
@@ -121,12 +121,12 @@ const rootReducer = (state = initialState, action) => {
         dogs: createFilter,
       };
 
-    case SET_CURRENT_PAGE:
+    /*case SET_CURRENT_PAGE:
       // console.log(action.payload);
       return {
         ...state,
         currentPage: action.payload,
-      };
+      };*/
 
     default:
       return initialState;

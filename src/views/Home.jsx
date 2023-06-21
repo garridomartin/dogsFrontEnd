@@ -31,45 +31,46 @@ const Home = () => {
   };
 
   return (
-    <div className={style.container}>
-      <div>
-        <SearchBar />
-      </div>
-
-      <div>
-        <button className={style.nameFilter} onClick={handleClick}>
-          RESET FILTERS
-        </button>
-        <FilterByOrigin
-          setCurrentPage={setCurrentPage}
-          order={order}
-          setOrder={setOrder}
-        />
-        <FilterByTemperament
-          setCurrentPage={setCurrentPage}
-          order={order}
-          setOrder={setOrder}
-        />
-      </div>
-      <div>
+    <>
+      <div className={style.container}>
         <div>
-          <FilterByAlphabet
+          <SearchBar />
+        </div>
+        <div>
+          <button className={style.nameFilter} onClick={handleClick}>
+            RESET FILTERS
+          </button>
+          <FilterByOrigin
             setCurrentPage={setCurrentPage}
             order={order}
             setOrder={setOrder}
           />
-          <FilterByWeight
+          <FilterByTemperament
+            setCurrentPage={setCurrentPage}
             order={order}
             setOrder={setOrder}
-            setCurrentPage={setCurrentPage}
           />
         </div>
+        <div>
+          <div>
+            <FilterByAlphabet
+              setCurrentPage={setCurrentPage}
+              order={order}
+              setOrder={setOrder}
+            />
+            <FilterByWeight
+              order={order}
+              setOrder={setOrder}
+              setCurrentPage={setCurrentPage}
+            />
+          </div>
+        </div>
+        <div className={style.User}>User</div>
+        <div className={style.CardsContainer}>
+          <CardContainer />
+        </div>
       </div>
-
-      <div className={style.CardsContainer}>
-        <CardContainer />
-      </div>
-    </div>
+    </>
   );
 };
 export default Home;

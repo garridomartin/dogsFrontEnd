@@ -27,6 +27,13 @@ body {
   background-color: #d2bead;
 }
 
+.User {
+  width: 100px;
+  background-color: white;
+  align-self: flex-start;
+  margin-left: 100px;
+}
+
 .container button,
 .container select {
   margin-bottom: 1em;
