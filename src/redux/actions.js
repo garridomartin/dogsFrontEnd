@@ -13,8 +13,7 @@ import {
   //SET_CURRENT_PAGE,
 } from './indexTypes';
 
-const URL_BASE1 = 'https://dogsbackend-production-3cd7.up.railway.app';
-const URL_BASE = 'https://dogs-back-qvmt2yvn6-garridomartin.vercel.app';
+const URL_BASE = 'https://dogsbackend-production-3cd7.up.railway.app';
 
 export const getDogs = () => {
   return async function (dispatch) {
