@@ -14,7 +14,7 @@ import {
 } from './indexTypes';
 
 const URL_BASE1 = 'https://dogsbackend-production-3cd7.up.railway.app';
-const URL_BASE = 'https://dogs-back-pcmx7q3n8-garridomartin.vercel.app/';
+const URL_BASE = 'https://dogs-back-qvmt2yvn6-garridomartin.vercel.app';
 
 export const getDogs = () => {
   return async function (dispatch) {
